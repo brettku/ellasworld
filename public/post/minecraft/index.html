@@ -2,18 +2,18 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Food - Ella&#39;s World</title>
+  <title>Minecraft - Ella&#39;s World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
   
-  <meta name="description" content="Food">
+  <meta name="description" content="Minecraft is a game that you can play on your computer, playstation, xbox or a tablet. You can play survival mode which is were you start out with nothing at all. The other mode is creative were you have everything in minecraft. In creative you can fly and the best part is that mobs don’t attack you. There are many skins and texture packs. Texture packs are things were you can change the colour and shape of most items for tablet version (minecraft PE).">
   <meta name="author" content="Ella">
-  <meta itemprop="name" content="Food - Ella&#39;s World">
-  <meta itemprop="description" content="Food">
+  <meta itemprop="name" content="Minecraft - Ella&#39;s World">
+  <meta itemprop="description" content="Minecraft is a game that you can play on your computer, playstation, xbox or a tablet. You can play survival mode which is were you start out with nothing at all. The other mode is creative were you have everything in minecraft. In creative you can fly and the best part is that mobs don’t attack you. There are many skins and texture packs. Texture packs are things were you can change the colour and shape of most items for tablet version (minecraft PE).">
   <meta itemprop="image" content="http://ellasworld.site/img/author.jpg">
   
   
   <meta name="twitter:description" content="">
-  <link rel="alternate" href="http://ellasworld.site/feed.xml" title="Ella&#39;s World" type="application/rss+xml"/>
+  
   <link rel="shortcut icon" href="http://ellasworld.site/img/favicon.ico"/>
   <link rel="apple-touch-icon" href="http://ellasworld.site/apple-touch-icon.png" />
   <link rel="apple-touch-icon-precomposed" href="http://ellasworld.site/apple-touch-icon.png" />
@@ -48,21 +48,39 @@
 
   </header>
   <div id="container">
-    <div id="main">
-      
-      <h2 id="2016-06">2016-06</h2>
-      
-      <section class="post" itemscope itemprop="blogPost">
-    <a href="http://ellasworld.site/post/cheesecake/" title="Cheesecake" itemprop="url">
-    <h1 itemprop="name">Cheesecake</h1>
-    <p itemprop="description">Last weekend I had a cheesecake at a friend’s house and my mum made it. It was delicious. Here are the ingredients: 300 g wheat meal biscuits 500 g cream cheese 200 g castor sugar 1 tablespoon of corn flower 3 eggs 2 tablespoon of lemon juice a few drops of pure vanilla and pinch of salt 2 cups of sour cream For the whole recipe go to ”The Cook’s Companion” by Stephanie Alexander.</p>
-    <time datetime="2016-06-04 19:21:28 &#43;0800 AWST" itemprop="datePublished">2016/06/04</time>
-  </a>
-</section>
+    <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody">
+    <header class="article-info clearfix">
+  <h1 itemprop="name">
+      <a href="http://ellasworld.site/post/minecraft/" title="Minecraft" itemprop="url">Minecraft</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="" title="Ella">Ella</a>
+    
+  </p>
+  <p class="article-time">
+    <time datetime="2016-07-09 10:46:39 &#43;0800 AWST" itemprop="datePublished">2016/07/09</time>
+  </p>
+</header>
 
-      
-      
-    </div>
+	<div class="article-content">
+    
+    <p>Minecraft is a game that you can play on your computer, playstation, xbox or a tablet. You can play survival mode which is were you start out with nothing at all. The other mode is creative were you have everything in minecraft.</p>
+
+<p>In creative you can fly and the best part is that mobs don’t attack you. There are many skins and texture packs. Texture packs are things were you can change the colour and shape of most items for tablet version (minecraft PE).  There is the city texture pack and the plastic texture pack.</p>
+
+<p>This is the city texture pack from a map I’ve downloaded (Kingdom of Fairheaven).
+<img src="/img/city_texture_pack.png" alt="city" /></p>
+
+<p>This is me near Finn and Jake&rsquo;s tree house (Land of Ooo) and this texture is the plastic.
+<img src="/img/plastic_texture_pack.png" alt="plastic" /></p>
+
+<p>If I had to rate this game this game out of ten I would give it a  9.5 out of 10.</p>
+
+	</div>
+</div>
+
     <div class="openaside"><a class="navbutton" href="#" title=""></a></div>
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title=""></a></div>
@@ -196,6 +214,38 @@ $(document).ready(function(){
 
 <script type="text/javascript">
 $(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
   var $this = $('.share'),
       url = $this.attr('data-url'),
       encodedUrl = encodeURIComponent(url),
@@ -222,6 +272,27 @@ $(document).ready(function(){
 });
 </script>
 
+
+<link rel="stylesheet" href="http://ellasworld.site/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="http://ellasworld.site/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
 
 
 <script>
