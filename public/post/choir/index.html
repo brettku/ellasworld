@@ -2,18 +2,18 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>404 Page not found - Ella&#39;s World</title>
+  <title>Choir - Ella&#39;s World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
   
-  <meta name="description" content="404 Page not found">
+  <meta name="description" content="In my school we have a choir for years 3-6 and I’m in it. We sing songs for occasions such as the One Big Voice and the Children’s Singfest. For the One Big Voice I’ll be singing I’ll Be There For You Rain Song Bumble Bee Sunny Day Goodbye Beethoven On Top Of The World A Place In The Choir When The Lights All Shine and Fight Song. My favourite songs are Goodbye Beethoven, Bumble Bee and When All The Lights All Shine.">
   <meta name="author" content="Ella">
-  <meta itemprop="name" content="404 Page not found - Ella&#39;s World">
-  <meta itemprop="description" content="404 Page not found">
+  <meta itemprop="name" content="Choir - Ella&#39;s World">
+  <meta itemprop="description" content="In my school we have a choir for years 3-6 and I’m in it. We sing songs for occasions such as the One Big Voice and the Children’s Singfest. For the One Big Voice I’ll be singing I’ll Be There For You Rain Song Bumble Bee Sunny Day Goodbye Beethoven On Top Of The World A Place In The Choir When The Lights All Shine and Fight Song. My favourite songs are Goodbye Beethoven, Bumble Bee and When All The Lights All Shine.">
   <meta itemprop="image" content="http://ellasworld.site/img/author.jpg">
   
   
   <meta name="twitter:description" content="">
-  <link rel="alternate" href="http://ellasworld.site/feed.xml" title="Ella&#39;s World" type="application/rss+xml"/>
+  
   <link rel="shortcut icon" href="http://ellasworld.site/img/favicon.ico"/>
   <link rel="apple-touch-icon" href="http://ellasworld.site/apple-touch-icon.png" />
   <link rel="apple-touch-icon-precomposed" href="http://ellasworld.site/apple-touch-icon.png" />
@@ -48,11 +48,46 @@
 
   </header>
   <div id="container">
-    <div id="main">
-      
-      Page Not Found!
-      
-    </div>
+    <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody">
+    <header class="article-info clearfix">
+  <h1 itemprop="name">
+      <a href="http://ellasworld.site/post/choir/" title="Choir" itemprop="url">Choir</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="" title="Ella">Ella</a>
+    
+  </p>
+  <p class="article-time">
+    <time datetime="2016-08-10 20:26:56 &#43;0800 AWST" itemprop="datePublished">2016/08/10</time>
+  </p>
+</header>
+
+	<div class="article-content">
+    
+    <p>In my school we have a choir for years 3-6  and I’m in it. We sing songs for occasions such as the One Big Voice and the Children’s Singfest.</p>
+
+<p>For the One Big Voice I’ll be singing</p>
+
+<ul>
+<li>I’ll Be There For You</li>
+<li>Rain Song</li>
+<li>Bumble Bee</li>
+<li>Sunny Day</li>
+<li>Goodbye Beethoven</li>
+<li>On Top Of The World</li>
+<li>A Place In The Choir</li>
+<li>When The  Lights All Shine and Fight Song.</li>
+</ul>
+
+<p>My favourite songs are Goodbye  Beethoven, Bumble Bee and When All The Lights All Shine.</p>
+
+<p><a href="http://onebigvoice.com.au/">Here is a link to the One Big Voice website</a></p>
+
+	</div>
+</div>
+
     <div class="openaside"><a class="navbutton" href="#" title=""></a></div>
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title=""></a></div>
@@ -193,6 +228,38 @@ $(document).ready(function(){
 
 <script type="text/javascript">
 $(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
   var $this = $('.share'),
       url = $this.attr('data-url'),
       encodedUrl = encodeURIComponent(url),
@@ -219,6 +286,27 @@ $(document).ready(function(){
 });
 </script>
 
+
+<link rel="stylesheet" href="http://ellasworld.site/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="http://ellasworld.site/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
 
 
 <script>
