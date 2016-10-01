@@ -1,0 +1,12 @@
++++
+date = "2016-10-01T11:46:31+08:00"
+title = "Royal Show"
+
++++
+The wonderful place  with everything you’ve ever dreamed can you guess were the place is? it’s the royal show! At the royal show there is rides, games, pavilions, shops and much much more…..
+
+My favourite ride was the water balls because it was so much fun I tumbled over and flipped it was the best ride ever.
+
+<video controls="controls" width="534" height="400" name="Royal Show" src="http://www.ellasworld.site/img/royal_show.mp4"></video>
+
+There was a thing called the members lounge were you could have dinner and watch the fire works, no matter how many times I see the fire works there always amazing!
